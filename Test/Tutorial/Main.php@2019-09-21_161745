@@ -1,0 +1,21 @@
+<?php
+
+namespace Test\Tutorial;
+
+use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\item\Item;
+class Main extends PluginBase implements Listener{
+
+  public function onEnable(){
+	  $this->getServer()->getPluginManager()->registerEvents($this, $this);
+  }
+  
+  public function onJoin(PlayerJoinEvent $e){
+	  $player = $e->getPlayer();
+	  $player->getInventory()->addItem(Item::get(466, 0, 11));
+	  $e->setCancel
+  } 
+
+}
